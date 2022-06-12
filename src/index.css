@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:400');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +13,134 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+.code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+.new-center {
+  line-height:4rem;
+  text-align:center;
+}
+
+/* contract: Never use the default text things, always use these. foreground is 100, shadow 200-400 */
+
+.new-text-amber {
+  color: rgb(254 243 199);
+  text-shadow: 0 1px rgb(253 230 138), 0 2px rgb(252 211 77), 0 3px rgb(252 211 77), 0 4px rgb(251 191 36), 0 5px rgb(251 191 36), 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.new-text-amber-dark {
+  color: rgb(254 243 199);
+  text-shadow: 0 1px rgb(253 230 138), 0 2px rgb(252 211 77), 0 3px rgb(252 211 77), 0 4px rgb(251 191 36), 0 5px rgb(251 191 36), 0 5px 6px rgba(0, 0, 0, 0.8);
+}
+
+.new-text-aqua {
+  color: rgb(207 250 254);
+  text-shadow: 0 1px rgb(165 243 252), 0 2px rgb(103 232 249), 0 3px rgb(103 232 249), 0 4px rgb(34 211 238), 0 5px rgb(34 211 238), 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.new-text-aqua-dark {
+  color: rgb(207 250 254);
+  text-shadow: 0 1px rgb(165 243 252), 0 2px rgb(103 232 249), 0 3px rgb(103 232 249), 0 4px rgb(34 211 238), 0 5px rgb(34 211 238), 0 5px 6px rgba(0, 0, 0, 0.8);
+}
+
+.new-box-aqua {
+  background-color: rgb(165 243 252);
+  box-shadow: 0 1px rgb(103 232 249), 0 2px rgb(34 211 238), 0 3px rgb(34 211 238), 0 4px rgb(6 182 212), 0 5px rgb(6 182 212), 0 7px 7px rgba(0, 0, 0, 0.6);
+}
+
+.new-button-aqua {
+  background-color: rgb(103 232 249);
+  box-shadow: 0 1px rgb(34 211 238), 0 2px rgb(6 182 212), 0 3px rgb(6 182 212), 0 4px rgb(8 145 178), 0 5px rgb(8 145 178), 0 7px 7px rgba(0, 0, 0, 0.6);
+}
+
+.new-button-amber {
+  background-color: rgb(252 211 77);
+  box-shadow: 0 1px rgb(251 191 36), 0 2px rgb(245 158 11), 0 3px rgb(245 158 11), 0 4px rgb(217 119 6), 0 5px rgb(217 119 6), 0 7px 7px rgba(0, 0, 0, 0.6);
+}
+
+.center-graph-screen-main-div {
+  position: fixed;
+  left: calc(50% - 1rem);
+  transform: translate(-50%, 0);
+}
+
+.center-graph {
+  position: fixed;
+  left: calc(50%);
+  transform: translate(-50%, 0);
+}
+
+.center-main-screen-buttons {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.full-screen-centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.center-tips-screen-tip {
+  position: fixed;
+  top: calc(50%);
+  width: calc(100% - 5rem);
+  transform: translate(0, -50%);
+}
+
+.place-tips-screen-btns {
+  position: fixed;
+  top: calc(75%);
+  width: calc(100% - 5rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.height-full-minus-margin {
+  height: calc(100vh - 3rem)
+}
+
+.width-full-minus-margin {
+  width: calc(100vw - 3rem)
+}
+
+.fixed-pos {
+  position: fixed;
+}
+
+.width-40pc {
+  width: 40vw
+}
+
+.width-66pc {
+  width: 66vw
+}
+
+.width-75pc {
+  width: 75vw
+}
+
+.height-6pc {
+  height: 6vh
+}
+
+.height-8pc {
+  height: 8vh
+}
+
+.height-16pc {
+  height: 16vh
+}
+
+.height-24pc {
+  height: 24vh
+}
+
+.kanit {
+  font-family: "Kanit", serif;
 }

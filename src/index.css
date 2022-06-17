@@ -75,7 +75,15 @@ body {
 .center-main-screen-buttons {
   position: fixed;
   left: 50%;
-  transform: translate(-50%, 0);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-goal-screen-goals {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .full-screen-centered {
@@ -95,8 +103,16 @@ body {
 
 .place-tips-screen-btns {
   position: fixed;
-  top: calc(75%);
-  width: calc(100% - 5rem);
+  top: calc(80%);
+  width: calc(50% - 2.5rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.place-progress-screen-btn {
+  position: fixed;
+  top: calc(85%);
+  width: calc(50% - 2.5rem);
   left: 50%;
   transform: translate(-50%, -50%);
 }

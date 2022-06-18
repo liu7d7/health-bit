@@ -1,4 +1,8 @@
-export const quotes = [
+import React, {useState} from "react";
+import {Btn, ClickBtn} from "./btn";
+import {Screen} from "../App";
+
+const quotes = [
     "“Mindset is what separates the best from the rest” - Unknown",
     "“A goal is just an awesome way to force growth on yourself” – Deena Kastor",
     "“One of the greatest moments is realizing that 2 months ago, your body couldn’t do what it just accomplished.” - Unknown",
@@ -12,3 +16,19 @@ export const quotes = [
     "A 30-minute workout is only ~2% of your day.",
     "At least you're not watching YouTube right now!"
 ]
+
+export const MotivationScreen = () => {
+    const [quoteIdx, setQuoteIdx] = useState(0)
+
+    return (
+        <div>
+            <div className="kanit new-text-aqua text-center mr-4 ml-4 text-3xl center-tips-screen-tip">
+                { quotes[quoteIdx] }
+            </div>
+            <div className="grid grid-cols-1 gap-y-4 place-items-center place-tips-screen-btns">
+                <Btn display="Get Working!" screen={Screen.goals} sizeCustomCss="width-66pc height-6pc text-2xl"></Btn>
+                <ClickBtn display="More Motivation!" sizeCustomCss="width-66pc height-6pc text-2xl" onClick={ () => { setQuoteIdx((quoteIdx + 1) % quotes.length) } }></ClickBtn>
+            </div>
+        </div>
+    )
+}
